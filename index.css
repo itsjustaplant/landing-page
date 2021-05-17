@@ -1,0 +1,342 @@
+:root{
+    font-size: 16px;
+    --saturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --grayish-red: hsl(0, 6%, 24%);
+}
+#warning-img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+#warning-text{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+button{
+    outline: none;
+}
+input{
+    outline: none;
+}
+@media only screen and (max-width: 768px){
+    body{
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    main{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template-areas: "logo"
+                             "image"
+                             "container";
+        grid-template-rows: 84px 66vw 1fr;
+    }
+    .main__logo{
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+    }
+    .logo__svg{
+        width: 6.25rem;
+        height: 1.3125rem;
+    }
+    .main__image{
+        grid-area: image;
+        width: 100vw;
+    }
+    .main__image img{
+        width: 100%;
+    }
+    .main__container{
+        grid-area: container;
+        padding: 0 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+    }
+    .container__header{
+        font-size: 2rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.5rem;
+        font-weight: 400;
+        padding-top: 4rem;
+        padding-bottom: 1.5rem;
+    }
+    .header__text--pink{
+        font-weight: 300;
+        color: var(--saturated-red);
+    }
+    .container__text{
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        color: var(--saturated-red);
+    }
+    .container__input{
+        vertical-align: center;
+        padding-top: 2rem;
+    }
+    .input__text{
+        width: calc(100vw - 4rem);
+        height: 3rem;
+        border: 1px solid var(--saturated-red);
+        border-radius: 1.5rem;
+        box-sizing: border-box;
+        padding: 0 5.5rem 0 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 300;
+    }
+    ::placeholder{
+        color: var(--saturated-red);
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 0.875rem;
+    }
+    .input__warning{
+        position: absolute;
+        width: 1.5rem;
+        transform: translate(-6rem , 0.75rem);
+    }
+    .input__submit{
+        position: absolute;
+        width: 4rem;
+        transform: translateX(-4rem);
+        height: 3rem;
+        border: transparent;
+        border-radius: 1.5rem;
+        box-sizing: border-box;
+        background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    }
+    .input__submit img{
+        margin-top: 4px;
+        height: 1.25rem;
+        width: auto;
+        align-self: center;
+    }
+    .input__submit:hover{
+        cursor: pointer;
+    }
+    .container__warning{
+        text-align: left;
+        padding: 0.625rem 1.5rem 1rem 1.5rem;
+        font-size: 0.75rem;
+        color: var(--saturated-red);
+        font-family: 'Josefin Sans', sans-serif;
+    }
+}
+@media only screen
+    and (min-width: 769px)
+    and (max-width: 1279px){
+    body{
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    main{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template-areas: "logo"
+                             "image"
+                             "container";
+        grid-template-rows: 84px 66vw 1fr;
+    }
+    .main__logo{
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        padding-left: 4rem;
+    }
+    .logo__svg{
+        width: 6.25rem;
+        height: 1.3125rem;
+    }
+    .main__image{
+        grid-area: image;
+        width: 100vw;
+    }
+    .main__image img{
+        width: 100%;
+    }
+    .main__container{
+        grid-area: container;
+        padding: 0 10rem;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+    }
+    .container__header{
+        font-size: 2rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.5rem;
+        font-weight: 400;
+        padding-top: 4rem;
+        padding-bottom: 1.5rem;
+    }
+    .header__text--pink{
+        font-weight: 300;
+        color: var(--saturated-red);
+    }
+    .container__text{
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        color: var(--saturated-red);
+    }
+    .container__input{
+        vertical-align: center;
+        padding-top: 2rem;
+    }
+    .input__text{
+        width: calc(100vw - 20rem);
+        height: 3rem;
+        border: 1px solid var(--saturated-red);
+        border-radius: 1.5rem;
+        box-sizing: border-box;
+        padding: 0 5.5rem 0 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 300;
+    }
+    ::placeholder{
+        color: var(--saturated-red);
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 0.875rem;
+    }
+    .input__warning{
+        position: absolute;
+        width: 1.5rem;
+        transform: translate(-6rem , 0.75rem);
+    }
+    .input__submit{
+        position: absolute;
+        width: 4rem;
+        transform: translateX(-4rem);
+        height: 3rem;
+        border: transparent;
+        border-radius: 1.5rem;
+        box-sizing: border-box;
+        background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    }
+    .input__submit img{
+        margin-top: 4px;
+        height: 1.25rem;
+        width: auto;
+        align-self: center;
+    }
+    .input__submit:hover{
+        cursor: pointer;
+    }
+    .container__warning{
+        text-align: left;
+        padding: 0.625rem 1.5rem 1rem 1.5rem;
+        font-size: 0.75rem;
+        color: var(--saturated-red);
+        font-family: 'Josefin Sans', sans-serif;
+    }
+}
+@media only screen and (min-width: 1280px){
+    body{
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("./images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    main{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "logo image"
+                             "container image";
+        grid-template-columns: calc(100vw - 76.25vh) 76.25vh;
+        grid-template-rows: 10rem calc(100vh - 10rem);
+    }
+    .main__logo{
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        padding: 4rem 10rem;
+    }
+    .logo__svg{
+        width: 10rem;
+        height: 2rem;
+    }
+    .main__image{
+        grid-area: image;
+        height: 100vh;
+    }
+    .main__image img{
+        content: url("./images/hero-desktop.jpg");
+        width: 100%;
+        height: 100%;
+    }
+    .main__container{
+        grid-area: container;
+        padding: 4.5rem 10rem;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: left;
+    }
+    .container__header{
+        font-size: 3rem;
+        line-height: 4rem;
+        letter-spacing: 1rem;
+        font-weight: 400;
+        padding-bottom: 2.5rem;
+    }
+    .header__text--pink{
+        font-weight: 300;
+        color: var(--saturated-red);
+    }
+    .container__text{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-bottom: 3rem;
+        color: var(--saturated-red);
+    }
+    .container__input{
+
+    }
+    .input__text{
+        width: calc(100vw - 76.25vh - 22rem);
+        height: 3.5rem;
+        border: 1px solid var(--saturated-red);
+        border-radius: 1.5rem;
+        box-sizing: border-box;
+        padding: 0 6.25rem 0 2rem;
+        font-weight: 300;
+    }
+    ::placeholder{
+        color: var(--saturated-red);
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .input__warning{
+        position: absolute;
+        transform: translate(-8.25rem, 1rem);
+    }
+    .input__submit{
+        position: absolute;
+        width: 6.25rem;
+        transform: translateX(-6.25rem);
+        height: 3.5rem;
+        border: transparent;
+        border-radius: 1.5rem;
+        box-sizing: border-box;
+        background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    }
+    .input__submit img{
+        margin-top: 4px;
+        height: 1.25rem;
+        width: auto;
+        align-self: center;
+    }
+    .container__warning{
+        font-size: 0.75rem;
+        padding: 0.625rem 6.25rem 0 2rem;
+        color: var(--saturated-red);
+    }
+}
